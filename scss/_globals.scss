@@ -1,0 +1,99 @@
+* {
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+h1 {
+  font-family: $alegreya;
+}
+
+h2,
+h3,
+h4 {
+  font-family: $sansPro;
+}
+
+p {
+  font-family: $openSans;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// buttons
+.button {
+  font-family: $openSans;
+  color: $blackTxtColor;
+  font-weight: $bold;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  width: 10.1875rem;
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+}
+
+.button--turquoise {
+  background-color: $turquoise;
+}
+
+.button--purple {
+  background-color: $purple;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+// vissibility
+
+.hide-on-mobile {
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include breakpoint-up(md) {
+    display: none;
+  }
+}
+
+// end vissibility
+
+// media q
+
+@include breakpoint-up(sm) {
+  .container {
+    width: 540px;
+  }
+}
+@include breakpoint-up(md) {
+  .container {
+    width: 720px;
+  }
+}
+@include breakpoint-up(lg) {
+  .container {
+    width: 960px;
+  }
+}
+@include breakpoint-up(xl) {
+  .container {
+    width: 1140px;
+  }
+}
+// end media q

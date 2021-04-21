@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  color: $whiteTxt;
+  text-align: center;
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
+  &__sub__title {
+    font-family: $alegreya;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  &__span {
+    background: linear-gradient(to right, #bb86fc, #70efde);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
