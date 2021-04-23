@@ -61,9 +61,9 @@ p {
 // vissibility
 
 .hide-on-mobile {
-  @include breakpoint-down(sm) {
-    display: none;
-  }
+  // @include breakpoint-down(sm) {
+  //   display: none;
+  // }
 }
 
 .hide-on-desktop {

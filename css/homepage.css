@@ -60,12 +60,6 @@ p {
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  .hide-on-mobile {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   .hide-on-desktop {
     display: none;
@@ -124,22 +118,35 @@ p {
   height: 6px;
   width: 32px;
   margin-block: 5px;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   transition: all 300ms ease-in-out;
   transform-origin: center left;
-}
-
-#active {
-  color: #bb86fc;
 }
 
 .nav__links {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1.625rem;
+  border-radius: 0.3125rem;
 }
 
-.nav__li:not(:last-child) {
-  margin-right: 5rem;
+.nav__li {
+  margin-bottom: 1.5rem;
+}
+
+.nav__position {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+#active {
+  color: #bb86fc;
 }
 
 .nav__ancer {
@@ -147,6 +154,8 @@ p {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  padding: 0.625rem;
+  font-size: 1.5rem;
 }
 
 .open > .nav__line:first-child {
@@ -162,18 +171,12 @@ p {
 }
 
 .overlay {
-  display: none;
   position: fixed;
   top: 5.25rem;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(18, 18, 18, 0.7);
-}
-
-.open--overlay {
-  display: block;
-  animation: fadeIn 300ms ease-in-out forwards;
+  background-color: rgba(18, 18, 18, 0.98);
 }
 
 .header {
@@ -206,9 +209,42 @@ p {
 
 @keyframes fadeIn {
   from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 300ms ease-in-out forwards;
 }

@@ -21,9 +21,28 @@
     height: 6px;
     width: 32px;
     margin-block: 5px;
-    border-radius: 5px;
+    border-radius: $borderRadius;
     transition: all 300ms ease-in-out;
     transform-origin: center left;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: transparentize($color: $white, $amount: 0.8);
+    padding: 1.625rem;
+    border-radius: $borderRadius;
+  }
+  &__li {
+    margin-bottom: 1.5rem;
+  }
+  &__position {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    animation: fadeIn 300ms ease-in-out forwards;
   }
 }
 
@@ -31,20 +50,17 @@
   color: $purple;
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-}
-
-.nav__li:not(:last-child) {
-  margin-right: 5rem;
-}
+// .nav__li:not(:last-child) {
+//   margin-right: 5rem;
+// }
 
 .nav__ancer {
   color: $whiteTxt;
   text-decoration: none;
   font-family: $openSans;
   font-weight: $semiBold;
+  padding: 0.625rem;
+  font-size: 1.5rem;
 }
 
 .open {
@@ -60,16 +76,18 @@
 }
 
 .overlay {
-  display: none;
   position: fixed;
   top: 5.25rem;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: transparentize($color: $backgroundColor, $amount: 0.3);
+  background-color: transparentize($color: $backgroundColor, $amount: 0.02);
 }
 
-.open--overlay {
-  display: block;
-  animation: fadeIn 300ms ease-in-out forwards;
-}
+// .open--overlay {
+//   display: block;
+// }
+
+// .close--overlay {
+//   animation: fadeOut 300ms ease-in-out forwards;
+// }
