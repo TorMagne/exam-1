@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const minute = document.querySelector('.countdown__minutes');
   const second = document.querySelector('.countdown__seconds');
 
-  const apiCall = async () => {
+  const nextLaunchApi = async () => {
     try {
       const response = await fetch(nextLaunchUrl);
       const json = await response.json();
@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  apiCall();
+  nextLaunchApi();
 });

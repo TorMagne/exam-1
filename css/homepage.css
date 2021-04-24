@@ -29,8 +29,8 @@ p {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -264,6 +264,22 @@ p {
 
 .circle:not(:last-child) {
   margin-bottom: -30px;
+}
+
+.information {
+  color: #ffffff;
+  margin-top: 10rem;
+}
+
+.information__para {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.information-header-styles {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 @keyframes fadeIn {
