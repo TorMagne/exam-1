@@ -12,3 +12,30 @@
   text-align: center;
   margin-bottom: 3rem;
 }
+
+.summary {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: transparentize($color: $white, $amount: 0.8);
+  border-radius: $borderRadius;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  outline: none;
+  font-family: $openSans;
+  font-weight: $semiBold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  &:hover {
+    background: transparentize($color: $white, $amount: 0.6);
+  }
+  &::marker {
+    color: $purple;
+  }
+  &::-webkit-details-marker {
+    color: $purple;
+  }
+}
+
+details[open] .summary ~ * {
+  animation: sweep 0.3s ease-in-out;
+}

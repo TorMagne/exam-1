@@ -27,8 +27,8 @@ const nextLaunch = async () => {
     headerSubTitle.innerHTML += launchName;
     informationHeader.innerHTML += `<p class="information__para">The ${launchName} will launch at ${nextLaunch}</p> 
     <p class="information__para"> The ${launchName} will use the rocket ${rocketName} witch 
-    had it's first use in ${rocketFirstFlight}.
-    ${rocketDescription}`;
+    had it's first use in ${rocketFirstFlight}.<p class="information__para">
+    ${rocketDescription}</p>`;
 
     // console.log(json);
   } catch (error) {
