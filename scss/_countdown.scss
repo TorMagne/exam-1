@@ -7,14 +7,26 @@
   flex-direction: column;
   align-items: center;
   margin-top: 12rem;
-  &__hours {
-    background-color: $turquoise;
-  }
-  &__minutes {
+  &__days {
     background-color: transparentize($color: $turquoise, $amount: 0.2);
   }
-  &__seconds {
+  &__hours {
+    background-color: transparentize($color: $turquoise, $amount: 0.4);
+  }
+  &__minutes {
     background-color: transparentize($color: $turquoise, $amount: 0.6);
+  }
+  &__seconds {
+    background-color: transparentize($color: $turquoise, $amount: 0.8);
+  }
+  &__para {
+    font-size: 1rem;
+    font-weight: $semiBold;
+    margin-top: -1.25rem;
+  }
+  &__time {
+    font-family: $poppins;
+    font-weight: $bold;
   }
 }
 
@@ -23,6 +35,7 @@
   height: 200px;
   width: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
