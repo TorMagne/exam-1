@@ -8,11 +8,12 @@
   text-align: center;
   &__title {
     margin-bottom: 3rem;
-    font-size: 3rem;
+    font-size: 5rem;
+    line-height: 1;
   }
   &__sub__title {
     font-family: $alegreya;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 3rem;
   }
   &__span {
