@@ -220,6 +220,11 @@ p {
   margin-top: 12rem;
 }
 
+.countdown__header {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
 .countdown__days {
   background-color: rgba(0, 188, 212, 0.8);
 }
