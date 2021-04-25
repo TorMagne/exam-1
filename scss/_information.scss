@@ -1,6 +1,7 @@
 .information {
   color: $whiteTxt;
   margin-top: 10rem;
+  margin-bottom: 5rem;
   &__para {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -33,6 +34,10 @@
   }
   &::-webkit-details-marker {
     color: $purple;
+  }
+  &__pad__location ul {
+    list-style: none;
+    font-family: $openSans;
   }
 }
 
