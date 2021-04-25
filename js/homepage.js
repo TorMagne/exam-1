@@ -9,6 +9,10 @@ const lPadname = document.querySelector('.summary__pad__name');
 const lPadLocation = document.querySelector('.summary__pad__location');
 const lPaddetails = document.querySelector('.summary_pad__details');
 
+// const main = document.querySelector('main');
+
+// main.innerHTML = `<div class="loader"></div>`;
+
 const nextLaunch = async () => {
   try {
     // nextlaunch
@@ -42,6 +46,8 @@ const nextLaunch = async () => {
     const launchPadLatitude = launchPadJson.latitude;
     const launchPadLongtitude = launchPadJson.longitude;
     const launchPadDetails = launchPadJson.details;
+
+    // main.innerHTML = '';
 
     // api html
     headerSubTitle.innerHTML += launchName;

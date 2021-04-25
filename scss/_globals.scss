@@ -58,6 +58,20 @@ p {
   text-decoration: none;
 }
 
+// loader
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 20px solid var(--grey);
+  border-top: 20px solid black;
+  border-right: 20px solid var(--grey);
+  border-bottom: 20px solid black;
+  border-left: 20px solid var(--grey);
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+  margin-top: 10rem;
+}
+
 // vissibility
 
 .hide-on-mobile {
