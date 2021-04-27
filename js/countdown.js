@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const minute = document.querySelector('.countdown__minutes');
   const second = document.querySelector('.countdown__seconds');
 
+  const countDownError = document.querySelector('#countdown-error');
+
   const nextLaunchApi = async () => {
     try {
       const response = await fetch(nextLaunchUrl);
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setInterval(updateCountDown, 1000);
     } catch (error) {
-      console.log(error);
+      countDownError.innerHTML = displayError('An error occured when loadgind countdown');
     }
   };
 
