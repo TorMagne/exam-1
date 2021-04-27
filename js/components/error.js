@@ -1,3 +1,3 @@
-function displayError(message = 'Unknown error has occured') {
+const displayError = (message = 'Unknown error has occured') => {
   return `<div class="error">${message}</div>`;
-}
+};
