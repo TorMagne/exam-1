@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch(nextLaunchUrl);
       const json = await response.json();
-      // console.log(json);
 
       const time = json.date_unix;
 
