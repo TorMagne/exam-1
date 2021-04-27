@@ -22,16 +22,11 @@ const nextLaunch = async () => {
     const date = launchJson.date_unix;
     const nextLaunch = new Date(date * 1000);
 
-    const launchName = launchJson.name;
-
     // id for the rocket for next launch
     const rocketId = launchJson.rocket;
     // the rocket for next launch
     const rocketResponse = await fetch(nextRocket + rocketId);
     const rocketJson = await rocketResponse.json();
-    const rocketName = rocketJson.name;
-    const rocketFirstFlight = rocketJson.first_flight;
-    const rocketDescription = rocketJson.description;
     console.log(rocketJson);
 
     // id for the launch pad for next launch
@@ -39,43 +34,36 @@ const nextLaunch = async () => {
     // launch pad for next launch
     const launchPadResponce = await fetch(nextLaunchPad + launchPadId);
     const launchPadJson = await launchPadResponce.json();
-    const launchPadName = launchPadJson.name;
-    const launchPadFullName = launchPadJson.full_name;
-    const launchPadLocation = launchPadJson.locality;
-    const launchPadTimezone = launchPadJson.timezone;
-    const launchPadLatitude = launchPadJson.latitude;
-    const launchPadLongtitude = launchPadJson.longitude;
-    const launchPadDetails = launchPadJson.details;
 
     // main.innerHTML = '';
 
     // api html
-    headerSubTitle.innerHTML += launchName;
+    headerSubTitle.innerHTML += launchJson.name;
     informationHeader.innerHTML += `<p class="information__para">
-                                    The ${launchName}  will launch at ${nextLaunch}</p> 
+                                    The ${launchJson.name}  will launch at ${nextLaunch}</p> 
                                     <p class="information__para">
-                                    The ${launchName} will use the rocket ${rocketName} witch 
-                                    had it's first use in ${rocketFirstFlight}.<p class="information__para">
-                                    ${rocketDescription}</p>`;
+                                    The ${launchJson.name} will use the rocket ${rocketJson.name} witch 
+                                    had it's first use in ${rocketJson.first_flight}.<p class="information__para">
+                                    ${rocketJson.description}</p>`;
 
     // information from api about launchpad details
-    lPadname.innerHTML += `<p>Name: ${launchPadFullName}.</p> 
-                          <p>${launchPadName}   for short</p>`;
+    lPadname.innerHTML += `<p>Name: ${launchPadJson.full_name}.</p> 
+                          <p>${launchPadJson.name}   for short</p>`;
     lPadLocation.innerHTML += `<ul>
                     <li>
-                    Location: ${launchPadLocation}
+                    Location: ${launchPadJson.locality}
                     </li>
                     <li>
-                    Timezone: ${launchPadTimezone}
+                    Timezone: ${launchPadJson.timezone}
                     </li>
                     <li>
-                    Latitude: ${launchPadLatitude}
+                    Latitude: ${launchPadJson.latitude}
                     </li>
                     <li>
-                    Longtitude: ${launchPadLongtitude}
+                    Longtitude: ${launchPadJson.longitude}
                     </li>
                     </ul>`;
-    lPaddetails.innerHTML += `<p>${launchPadDetails}</p>`;
+    lPaddetails.innerHTML += `<p>${launchPadJson.details}</p>`;
     // console.log(json);
   } catch (error) {
     console.log(error);
