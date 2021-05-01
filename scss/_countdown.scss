@@ -19,6 +19,9 @@
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
+    @include breakpoint-up(xl) {
+      font-size: 5rem;
+    }
   }
   &__days {
     background-color: transparentize($color: $turquoise, $amount: 0.2);

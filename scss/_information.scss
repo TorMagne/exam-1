@@ -19,6 +19,9 @@
   font-size: 2rem;
   text-align: center;
   margin-bottom: 3rem;
+  @include breakpoint-up(xl) {
+    font-size: 4rem;
+  }
 }
 
 .summary {

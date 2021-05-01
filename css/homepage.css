@@ -309,10 +309,22 @@ p {
   line-height: 1;
 }
 
+@media (min-width: 1200px) {
+  .header__title {
+    font-size: 6rem;
+  }
+}
+
 .header__sub__title {
   font-family: "Alegreya Sans SC", sans-serif;
   font-size: 2.8rem;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .header__sub__title {
+    font-size: 4rem;
+  }
 }
 
 .header__span {
@@ -349,6 +361,12 @@ p {
   margin-bottom: 3rem;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .countdown__header {
+    font-size: 5rem;
+  }
 }
 
 .countdown__days {
@@ -421,6 +439,12 @@ p {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .information-header-styles {
+    font-size: 4rem;
+  }
 }
 
 .summary {
