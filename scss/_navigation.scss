@@ -32,9 +32,18 @@
     background-color: transparentize($color: $white, $amount: 0.8);
     padding: 1.625rem;
     border-radius: $borderRadius;
+    @include breakpoint-up(lg) {
+      background-color: transparent;
+      flex-direction: row;
+      padding: 0;
+      justify-content: flex-end;
+    }
   }
   &__li {
     margin-bottom: 1.5rem;
+    @include breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
   }
   &__position {
     position: absolute;
@@ -43,6 +52,9 @@
     left: 0;
     text-align: center;
     animation: fadeIn 300ms ease-in-out forwards;
+    @include breakpoint-up(lg) {
+      position: static;
+    }
   }
 }
 
@@ -61,6 +73,9 @@
   font-weight: $semiBold;
   padding: 0.625rem;
   font-size: 1.5rem;
+  @include breakpoint-up(lg) {
+    font-size: 1.3rem;
+  }
 }
 
 .open {
@@ -82,4 +97,7 @@
   bottom: 0;
   left: 0;
   background-color: transparentize($color: $backgroundColor, $amount: 0.02);
+  @include breakpoint-up(lg) {
+    display: none;
+  }
 }

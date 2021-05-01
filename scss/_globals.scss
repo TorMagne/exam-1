@@ -1,3 +1,4 @@
+@import 'animations';
 * {
   font-size: 100%;
   box-sizing: border-box;
@@ -82,12 +83,6 @@ p {
 
 // vissibility
 
-.hide-on-mobile {
-  // @include breakpoint-down(sm) {
-  //   display: none;
-  // }
-}
-
 .hide-on-desktop {
   @include breakpoint-up(md) {
     display: none;
@@ -111,6 +106,12 @@ p {
 @include breakpoint-up(lg) {
   .container {
     width: 960px;
+  }
+  .nav__links {
+    background-color: transparent;
+  }
+  .has-fade {
+    visibility: visible;
   }
 }
 @include breakpoint-up(xl) {

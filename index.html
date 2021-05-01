@@ -12,13 +12,13 @@
     <nav class="nav">
       <div class="overlay has-fade"></div>
       <div class="container container-flex">
-        <h4 class="nav__logo"><a href="#">SpaceX</a></h4>
+        <h4 class="nav__logo"><a href="index.html">SpaceX</a></h4>
         <div class="nav__hamburger__container hide-on-desktop" id="btnHamburger">
           <div class="nav__line"></div>
           <div class="nav__line"></div>
           <div class="nav__line"></div>
         </div>
-        <div class="hide-on-mobile nav__position container">
+        <div class="nav__position container">
           <ul class="nav__links has-fade">
             <li class="nav__li"><a href="index.html" class="nav__ancer" id="active">Home</a></li>
             <li class="nav__li"><a href="prevLaunches.html" class="nav__ancer">Previous Launches</a></li>
@@ -42,28 +42,32 @@
     <main>
       <section class="countdown container" id="countdown-error">
         <h2 class="countdown__header">Countdown</h2>
-        <div class="countdown__days circle"></div>
-        <div class="countdown__hours circle"></div>
-        <div class="countdown__minutes circle"></div>
-        <div class="countdown__seconds circle"></div>
+        <div class="countdown__container">
+          <div class="countdown__days circle"></div>
+          <div class="countdown__hours circle"></div>
+          <div class="countdown__minutes circle"></div>
+          <div class="countdown__seconds circle"></div>
+        </div>
       </section>
 
       <section class="information container">
         <h2 class="information-header-styles">Learn more about the next launch</h2>
         <div class="information__container"></div>
         <h2 class="information-header-styles">Launchpad information</h2>
-        <details>
-          <summary class="summary">Launchpad Name</summary>
-          <p class="summary__pad__name"></p>
-        </details>
-        <details>
-          <summary class="summary">Location</summary>
-          <div class="summary__pad__location"></div>
-        </details>
-        <details>
-          <summary class="summary">More Details</summary>
-          <div class="summary_pad__details"></div>
-        </details>
+        <div class="summary__container">
+          <details>
+            <summary class="summary">Launchpad Name</summary>
+            <p class="summary__pad__name"></p>
+          </details>
+          <details>
+            <summary class="summary">Location</summary>
+            <div class="summary__pad__location"></div>
+          </details>
+          <details>
+            <summary class="summary">More Details</summary>
+            <div class="summary_pad__details"></div>
+          </details>
+        </div>
       </section>
     </main>
   </body>

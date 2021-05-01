@@ -2,6 +2,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .has-fade {
+    visibility: visible;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 300ms ease-in-out forwards;
+}
+
 * {
   font-size: 100%;
   box-sizing: border-box;
@@ -33,6 +81,13 @@ p {
   padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.error {
+  border: 2px solid firebrick;
+  font-size: 0.5rem;
+  color: red;
+  padding: 1rem;
 }
 
 .button {
@@ -96,6 +151,12 @@ p {
   .container {
     width: 960px;
   }
+  .nav__links {
+    background-color: transparent;
+  }
+  .has-fade {
+    visibility: visible;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -146,8 +207,23 @@ p {
   border-radius: 0.3125rem;
 }
 
+@media (min-width: 992px) {
+  .nav__links {
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-end;
+  }
+}
+
 .nav__li {
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav__li {
+    margin-bottom: 0;
+  }
 }
 
 .nav__position {
@@ -157,6 +233,12 @@ p {
   left: 0;
   text-align: center;
   animation: fadeIn 300ms ease-in-out forwards;
+}
+
+@media (min-width: 992px) {
+  .nav__position {
+    position: static;
+  }
 }
 
 #active {
@@ -170,6 +252,12 @@ p {
   font-weight: 600;
   padding: 0.625rem;
   font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav__ancer {
+    font-size: 1.3rem;
+  }
 }
 
 .open > .nav__line:first-child {
@@ -191,6 +279,12 @@ p {
   bottom: 0;
   left: 0;
   background-color: rgba(18, 18, 18, 0.98);
+}
+
+@media (min-width: 992px) {
+  .overlay {
+    display: none;
+  }
 }
 
 @keyframes fadeIn {
@@ -227,21 +321,16 @@ p {
   visibility: hidden;
 }
 
+@media (min-width: 992px) {
+  .has-fade {
+    visibility: visible;
+  }
+}
+
 .fade-in {
   animation: fadeIn 300ms ease-in-out forwards;
 }
 
 .fade-out {
   animation: fadeOut 300ms ease-in-out forwards;
-}
-
-@keyframes sweep {
-  from {
-    opacity: 0;
-    margin-top: -10px;
-  }
-  to {
-    opacity: 1;
-    margin-top: 0;
-  }
 }
