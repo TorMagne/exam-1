@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .has-fade {
+    visibility: visible;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 300ms ease-in-out forwards;
+}
+
+* {
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+}
+
+h1 {
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.error {
+  border: 2px solid firebrick;
+  font-size: 1rem;
+  color: red;
+  padding: 1rem;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  width: 10.1875rem;
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+}
+
+.button--turquoise {
+  background-color: #00bcd4;
+}
+
+.button--purple {
+  background-color: #bb86fc;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 20px solid var(--grey);
+  border-top: 20px solid black;
+  border-right: 20px solid var(--grey);
+  border-bottom: 20px solid black;
+  border-left: 20px solid var(--grey);
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+  margin-top: 10rem;
+}
+
+@media (min-width: 768px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+  .nav__links {
+    background-color: transparent;
+  }
+  .has-fade {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 32px solid #ffffff;
+  border-top: 32px solid #bb86fc;
+  border-right: 32px solid #00bcd4;
+  border-bottom: 32px solid #bb86fc;
+  border-left: 32px solid #00bcd4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  padding-top: 1.5rem;
+}
+
+.nav .container-flex {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+.nav__logo a {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-decoration: none;
+}
+
+.nav__hamburger__container {
+  cursor: pointer;
+}
+
+.nav__line {
+  background-color: #bb86fc;
+  height: 6px;
+  width: 32px;
+  margin-block: 5px;
+  border-radius: 0.3125rem;
+  transition: all 300ms ease-in-out;
+  transform-origin: center left;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1.625rem;
+  border-radius: 0.3125rem;
+}
+
+@media (min-width: 992px) {
+  .nav__links {
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-end;
+  }
+}
+
+.nav__li {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav__li {
+    margin-bottom: 0;
+  }
+}
+
+.nav__position {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+@media (min-width: 992px) {
+  .nav__position {
+    position: static;
+  }
+}
+
+#active {
+  color: #bb86fc;
+}
+
+.nav__ancer {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 0.625rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav__ancer {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+  }
+}
+
+.open > .nav__line:first-child {
+  transform: rotate(45deg);
+}
+
+.open > .nav__line:nth-child(2) {
+  opacity: 0;
+}
+
+.open > .nav__line:last-child {
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  top: 5.25rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(18, 18, 18, 0.98);
+}
+
+@media (min-width: 992px) {
+  .overlay {
+    display: none;
+  }
+}
