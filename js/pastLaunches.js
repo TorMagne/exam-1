@@ -4,7 +4,10 @@ const red = document.querySelector('.red');
 
 const items = document.querySelector('.items');
 
-launchesContainer.innerHTML = `<div class="loader"></div>`;
+launchesContainer.innerHTML = `<div class="container">
+                                <div class="loader">
+                                </div>
+                               </div>`;
 
 // links
 const pastLaunchesUrl = 'https://api.spacexdata.com/v4/launches/past';
