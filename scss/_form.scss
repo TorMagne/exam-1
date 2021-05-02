@@ -1,0 +1,80 @@
+.main {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.main-title {
+  color: $whiteTxt;
+  font-size: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.succsess {
+  display: none;
+  border: 2px solid #03d503;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  min-width: 300px;
+  background: transparentize($color: $white, $amount: 0.8);
+  border-radius: $borderRadius;
+  padding: 2rem;
+  color: $whiteTxt;
+}
+
+.container-items {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-items label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container-items input {
+  max-width: 25rem;
+  height: 2.1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid $purple;
+  border-radius: $borderRadius;
+}
+
+.container-items button {
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  background-color: $turquoise;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-error {
+  display: none;
+  color: #e74c3c;
+  margin-top: 0.1rem;
+}
+// @media screen and (max-width: 600px) {
+//   .container {
+//     margin-bottom: 2rem;
+//   }
+//   .container-items input {
+//     width: 15rem;
+//   }
+// }
