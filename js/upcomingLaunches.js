@@ -6,6 +6,8 @@ const items = document.querySelector('.items');
 
 launchesContainer.innerHTML = `<div class="loader"></div>`;
 
+const error = document.querySelector('#countdown-error');
+
 // links
 const upcomingUrl = 'https://api.spacexdata.com/v4/launches/upcoming';
 
@@ -29,7 +31,7 @@ const pastLaunches = async () => {
                                       </div>`;
     });
   } catch (error) {
-    console.log(error);
+    error.innerHTML = displayError('An error occured when loading countdown');
   }
 };
 
