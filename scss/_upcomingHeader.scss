@@ -1,0 +1,23 @@
+.header {
+  &__title {
+    font-size: 3rem;
+    color: $whiteTxt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    @include breakpoint-up(lg) {
+      font-size: 5rem;
+    }
+  }
+  &__border {
+    background: linear-gradient(to right, #bb86fc, #70efde);
+    height: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+}

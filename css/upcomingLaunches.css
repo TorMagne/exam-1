@@ -363,12 +363,7 @@ p {
   font-size: 1.2rem;
 }
 
-.launches__link {
-  color: #01bed7;
-}
-
-.launches p,
-.launches a {
+.launches p {
   padding: 0.3rem;
 }
 

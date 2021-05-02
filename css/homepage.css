@@ -165,6 +165,25 @@ p {
   }
 }
 
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 32px solid #ffffff;
+  border-top: 32px solid #bb86fc;
+  border-right: 32px solid #00bcd4;
+  border-bottom: 32px solid #bb86fc;
+  border-left: 32px solid #00bcd4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .nav {
   padding-top: 1.5rem;
 }
@@ -414,6 +433,12 @@ p {
 @media (min-width: 992px) {
   .circle:not(:last-child) {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle:not(:last-child) {
+    margin-right: -30px;
   }
 }
 
