@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const minute = document.querySelector('.countdown__minutes');
   const second = document.querySelector('.countdown__seconds');
 
-  const error = document.querySelector('#countdown-error');
-
   const nextLaunchApi = async () => {
     try {
       const response = await fetch(nextLaunchUrl);

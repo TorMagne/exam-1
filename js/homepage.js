@@ -9,10 +9,6 @@ const lPadname = document.querySelector('.summary__pad__name');
 const lPadLocation = document.querySelector('.summary__pad__location');
 const lPaddetails = document.querySelector('.summary_pad__details');
 
-// const main = document.querySelector('main');
-
-// main.innerHTML = `<div class="loader"></div>`;
-
 const nextLaunch = async () => {
   try {
     // nextlaunch
@@ -34,8 +30,6 @@ const nextLaunch = async () => {
     // launch pad for next launch
     const launchPadResponce = await fetch(nextLaunchPad + launchPadId);
     const launchPadJson = await launchPadResponce.json();
-
-    // main.innerHTML = '';
 
     // api html
     headerSubTitle.innerHTML += launchJson.name;
@@ -64,9 +58,10 @@ const nextLaunch = async () => {
                     </li>
                     </ul>`;
     lPaddetails.innerHTML += `<p>${launchPadJson.details}</p>`;
-    // console.log(json);
   } catch (error) {
-    console.log(error);
+    informationHeader.innerHTML = displayError('An error occured when loading countdown');
+    lPadname.innerHTML = displayError('An error occured when loading countdown');
+    lPadLocation.innerHTML = displayError('An error occured when loading countdown');
   }
 };
 

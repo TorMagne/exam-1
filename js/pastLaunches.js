@@ -6,8 +6,6 @@ const items = document.querySelector('.items');
 
 launchesContainer.innerHTML = `<div class="loader"></div>`;
 
-const error = document.querySelector('#countdown-error');
-
 // links
 const pastLaunchesUrl = 'https://api.spacexdata.com/v4/launches/past';
 
@@ -28,7 +26,7 @@ const pastLaunches = async () => {
       const succsess = launchLoop.success;
       const link = launchLoop.links.webcast;
 
-      const lol = () => {
+      const successOrFailure = () => {
         if (succsess) {
           return `<span class="green">Succsess</span>`;
         } else {
@@ -40,11 +38,11 @@ const pastLaunches = async () => {
                                         <p class="launches__title">Mission: ${name}</p>
                                         <p class="launches__time">Launched at: ${newDate}</p>
                                         <a href="${link}" class="launches__link">Launch video</a>
-                                        <p>Launch: ${lol()}</P>
+                                        <p>Launch: ${successOrFailure()}</P>
                                       </div>`;
     });
   } catch (error) {
-    error.innerHTML = displayError('An error occured when loading countdown');
+    launchesContainer.innerHTML = displayError('An error occured when loading countdown');
   }
 };
 
