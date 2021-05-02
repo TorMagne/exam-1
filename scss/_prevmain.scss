@@ -1,0 +1,46 @@
+.launches {
+  &__container {
+    @include breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1rem 3rem;
+      grid-template-areas:
+        '. .'
+        '. .'
+        '. .';
+    }
+  }
+  &__items {
+    color: $whiteTxt;
+    background: transparentize($color: $white, $amount: 0.8);
+    margin-top: 3rem;
+    border-radius: $borderRadius;
+    max-width: 500px;
+    border: solid 1px $purple;
+    padding: 1rem;
+    max-width: 720px;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: $semiBold;
+  }
+  &__time {
+    font-size: 1.2rem;
+  }
+  &__link {
+    color: #01bed7;
+  }
+  p,
+  a {
+    padding: 0.3rem;
+  }
+}
+
+.green {
+  color: #03d503;
+}
+
+.red {
+  color: red;
+}

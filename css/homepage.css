@@ -257,6 +257,7 @@ p {
 @media (min-width: 992px) {
   .nav__ancer {
     font-size: 1.3rem;
+    margin-left: 2rem;
   }
 }
 

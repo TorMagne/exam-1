@@ -257,6 +257,7 @@ p {
 @media (min-width: 992px) {
   .nav__ancer {
     font-size: 1.3rem;
+    margin-left: 2rem;
   }
 }
 
@@ -285,6 +286,79 @@ p {
   .overlay {
     display: none;
   }
+}
+
+.header__title {
+  font-size: 3rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+  .header__title {
+    font-size: 5rem;
+  }
+}
+
+.header__border {
+  background: linear-gradient(to right, #bb86fc, #70efde);
+  height: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .launches__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem 3rem;
+    grid-template-areas: '. .' '. .' '. .';
+  }
+}
+
+.launches__items {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 3rem;
+  border-radius: 0.3125rem;
+  max-width: 500px;
+  border: solid 1px #bb86fc;
+  padding: 1rem;
+  max-width: 720px;
+}
+
+.launches__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.launches__time {
+  font-size: 1.2rem;
+}
+
+.launches__link {
+  color: #01bed7;
+}
+
+.launches p,
+.launches a {
+  padding: 0.3rem;
+}
+
+.green {
+  color: #03d503;
+}
+
+.red {
+  color: red;
 }
 
 @keyframes fadeIn {
