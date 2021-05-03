@@ -14,7 +14,7 @@ function formValidation(event) {
 
   let validationFailure = true;
 
-  if (checkLength(name.value, 0) === true) {
+  if (checkLength(name.value, 0)) {
     nameError.style.display = 'none';
     validationFailure = true;
   } else {
@@ -22,7 +22,7 @@ function formValidation(event) {
     validationFailure = false;
   }
 
-  if (checkLength(subject.value, 9) === true) {
+  if (checkLength(subject.value, 9)) {
     subjectError.style.display = 'none';
     validationFailure = true;
   } else {
@@ -30,7 +30,7 @@ function formValidation(event) {
     validationFailure = false;
   }
 
-  if (checkLength(address.value, 24) === true) {
+  if (checkLength(address.value, 24)) {
     addressError.style.display = 'none';
     validationFailure = true;
   } else {
@@ -38,7 +38,7 @@ function formValidation(event) {
     validationFailure = false;
   }
 
-  if (validateEmail(email.value) === true) {
+  if (validateEmail(email.value)) {
     emailError.style.display = 'none';
     validationFailure = true;
   } else {
@@ -46,7 +46,7 @@ function formValidation(event) {
     validationFailure = false;
   }
 
-  if (validationFailure === true) {
+  if (validationFailure) {
     succsess.style.display = 'block';
   } else {
     succsess.style.display = 'none';
