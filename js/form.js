@@ -16,7 +16,6 @@ function formValidation(event) {
 
   if (checkLength(name.value, 0)) {
     nameError.style.display = 'none';
-    validationFailure = true;
   } else {
     nameError.style.display = 'block';
     validationFailure = false;
@@ -24,7 +23,6 @@ function formValidation(event) {
 
   if (checkLength(subject.value, 9)) {
     subjectError.style.display = 'none';
-    validationFailure = true;
   } else {
     subjectError.style.display = 'block';
     validationFailure = false;
@@ -32,7 +30,6 @@ function formValidation(event) {
 
   if (checkLength(address.value, 24)) {
     addressError.style.display = 'none';
-    validationFailure = true;
   } else {
     addressError.style.display = 'block';
     validationFailure = false;
@@ -40,7 +37,6 @@ function formValidation(event) {
 
   if (validateEmail(email.value)) {
     emailError.style.display = 'none';
-    validationFailure = true;
   } else {
     emailError.style.display = 'block';
     validationFailure = false;
