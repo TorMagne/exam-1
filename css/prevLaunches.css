@@ -59,6 +59,11 @@
 
 body {
   background-color: #121212;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -69,10 +74,6 @@ h2,
 h3,
 h4 {
   font-family: "Source Sans Pro", sans-serif;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -267,7 +268,6 @@ p {
 .nav__ancer {
   color: #ffffff;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   padding: 0.625rem;
   font-size: 1.5rem;

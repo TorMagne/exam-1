@@ -8,6 +8,11 @@
 
 body {
   background-color: $backgroundColor;
+  font-family: $openSans;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -18,10 +23,6 @@ h2,
 h3,
 h4 {
   font-family: $sansPro;
-}
-
-p {
-  font-family: $openSans;
 }
 
 .container {
