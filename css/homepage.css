@@ -130,7 +130,7 @@ h4 {
   margin-top: 10rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .hide-on-desktop {
     display: none;
   }
@@ -277,6 +277,12 @@ h4 {
   .nav__ancer {
     font-size: 1.3rem;
     margin-left: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__ancer {
+    font-size: 1.2rem;
   }
 }
 

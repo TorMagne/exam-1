@@ -85,7 +85,7 @@ h4 {
 // vissibility
 
 .hide-on-desktop {
-  @include breakpoint-up(md) {
+  @include breakpoint-up(lg) {
     display: none;
   }
 }

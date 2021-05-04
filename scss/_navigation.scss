@@ -72,6 +72,9 @@
     font-size: 1.3rem;
     margin-left: 2rem;
   }
+  @include breakpoint-up(md) {
+    font-size: 1.2rem;
+  }
 }
 
 .open {
