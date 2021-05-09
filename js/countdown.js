@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const time = json.date_unix;
 
-      // const year = new Date().getFullYear();
       const nextLaunch = new Date(time * 1000);
 
       const updateCountDown = () => {
