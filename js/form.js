@@ -47,8 +47,6 @@ function formValidation(event) {
   } else {
     succsess.style.display = 'none';
   }
-
-  // return true;
 }
 
 form.addEventListener('submit', formValidation);

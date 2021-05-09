@@ -23,7 +23,6 @@ const nextLaunch = async () => {
     // the rocket for next launch
     const rocketResponse = await fetch(nextRocket + rocketId);
     const rocketJson = await rocketResponse.json();
-    console.log(rocketJson);
 
     // id for the launch pad for next launch
     const launchPadId = launchJson.launchpad;

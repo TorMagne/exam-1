@@ -16,7 +16,6 @@ const pastLaunches = async () => {
   try {
     const response = await fetch(upcomingUrl);
     const json = await response.json();
-    console.log(json);
 
     launchesContainer.innerHTML = '';
 
