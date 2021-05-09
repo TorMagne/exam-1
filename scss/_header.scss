@@ -32,3 +32,17 @@
     -webkit-text-fill-color: transparent;
   }
 }
+
+.button--turquoise {
+  background-color: $turquoise;
+  &:hover {
+    background: transparentize($color: $turquoise, $amount: 0.1);
+  }
+}
+
+.button--purple {
+  background-color: $purple;
+  &:hover {
+    background: transparentize($color: $purple, $amount: 0.1);
+  }
+}

@@ -105,14 +105,6 @@ h4 {
   border-radius: 0.3125rem;
 }
 
-.button--turquoise {
-  background-color: #00bcd4;
-}
-
-.button--purple {
-  background-color: #bb86fc;
-}
-
 .header a {
   text-decoration: none;
 }
@@ -358,6 +350,22 @@ h4 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.button--turquoise {
+  background-color: #00bcd4;
+}
+
+.button--turquoise:hover {
+  background: rgba(0, 188, 212, 0.9);
+}
+
+.button--purple {
+  background-color: #bb86fc;
+}
+
+.button--purple:hover {
+  background: rgba(187, 134, 252, 0.9);
 }
 
 .countdown {
